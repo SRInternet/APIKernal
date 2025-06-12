@@ -1,3 +1,19 @@
+"""
+PROJECT:    APIKernal - The request, parsing and batch parsing of the API are all completed in one step.
+MODULE:     APIKernal.py
+FUNCTION:   APIKernal is a module that encapsulates the request, parsing and batch parsing of the API.
+AUTHOR:     SRInternet
+DATE:       2025-06
+VERSION:    1.0.0 (see Releases Notes)
+
+DEPENDENCIES:
+  - aiohttp
+  - asyncio
+
+NOTES:
+  This module is compatible with Python 3.8+
+"""
+
 import aiohttp
 import asyncio
 from typing import Any, Dict, List, Optional, Union, Tuple
