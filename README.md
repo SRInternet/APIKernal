@@ -1,6 +1,8 @@
 # APIKernal 模块
 
 API的请求、高级解析解析和批处理一步到位。
+> [!Important]
+> APIKernal 模块目前处于开发阶段，[路径解析语法](#路径解析语法)中的部分功能可能尚未完全实现或不稳定。若您遇到问题，请及时发布 [New Issue](https://github.com/SRInternet/APIKernal/issues/new) ，感谢理解。
 
 ## 功能特性
 
