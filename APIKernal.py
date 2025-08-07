@@ -24,8 +24,11 @@ def construct_api(api: str, payload: Optional[Dict[str, Any]] = None, split_str:
     """构造请求的URL和参数
     
     :param api: API端点URL
-    :param payload: 请求负载(对于POST/PUT等)
-    :param split_str: 对于是列表类型的请求负载，如果是 GET 方法，则将列表中的每个值用此字符连接（缺省为 '|'）"""
+    :param payload: 请求负载
+    :param split_str: 对于是列表类型的请求负载，如果是 GET 方法，则将列表中的每个值用此字符连接（缺省为 '|'）
+    :return: 构造好的URL
+    
+    注意：此方法仅适用于 API 的请求方法为 GET 或 HEAD 时。"""
     
     url = api.rstrip('/').rstrip('?')
     none_params = []
@@ -71,7 +74,7 @@ async def request_api(
     :param paths: 要解析的一个或多个路径
     :param method: HTTP方法 (GET, POST, etc.)
     :param headers: 请求头
-    :param payload: 请求负载(对于POST/PUT等)
+    :param payload: 请求负载
     :param split_str: 对于是列表类型的请求负载，如果是 GET 方法，则将列表中的每个值用此字符连接（缺省为 '|'）
     :param timeout: 超时时间(秒)
     :param raw: True = 返回原始数据，False = 返回按照 paths 解析后的数据
